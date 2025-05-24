@@ -1,0 +1,66 @@
+
+Quesito 1 – Pianificazione della produzione settimanale
+
+Un'azienda deve pianificare la produzione settimanale di 4 prodotti: A, B, C e D.
+La produzione utilizza 3 macchine (M1, M2, M3), ognuna con una disponibilità settimanale di 300 ore.
+
+Per ogni prodotto sono noti:
+- i tempi di lavorazione (in ore) richiesti su ciascuna macchina;
+- il profitto unitario;
+- una domanda minima settimanale da soddisfare.
+
+| Prodotto | M1 | M2 | M3 | Profitto | Domanda Minima |
+|----------|----|----|----|----------|-----------------|
+| A        | 2  | 1  | 1  | 5        | 10              |
+| B        | 1  | 3  | 2  | 6        | 20              |
+| C        | 2  | 2  | 2  | 7        | 15              |
+| D        | 3  | 1  | 3  | 10       | 10              |
+
+Obiettivo:
+Determinare quante unità produrre di ciascun prodotto per massimizzare il profitto,
+rispettando la capacità delle macchine e le domande minime.
+
+
+Quesito 2 – Estensione con turni e penalità
+
+L’azienda introduce la possibilità di aumentare la capacità settimanale delle macchine attivando turni straordinari, con un costo orario aggiuntivo.
+
+- Ogni macchina ha una capacità base di 300 ore.
+- È possibile attivare fino a 100 ore extra per ciascuna macchina, al costo di:
+  - M1: 5 €/h
+  - M2: 4 €/h
+  - M3: 3 €/h
+
+Nuovo obiettivo:
+Massimizzare il profitto netto, ovvero il profitto dalla produzione meno i costi dei turni straordinari attivati.
+
+Vincoli aggiuntivi:
+- Le ore extra devono essere comprese tra 0 e 100 per macchina.
+- Il modello deve decidere quante ore extra attivare per ogni macchina.
+
+
+Quesito 3 – Introduzione di categorie di operai e disponibilità settimanale
+
+Ogni macchina può essere gestita solo da un certo numero di operai specializzati.
+Gli operai sono suddivisi in 2 categorie: OP1 e OP2.
+
+- OP1 può lavorare su M1 e M2.
+- OP2 può lavorare su M2 e M3.
+- Ogni operaio può lavorare fino a 40 ore a settimana.
+- Disponibilità totale:
+  - OP1: 8 operai
+  - OP2: 10 operai
+
+Vincolo aggiuntivo:
+La somma delle ore utilizzate su ogni macchina non può eccedere le ore totali disponibili degli operai qualificati per quella macchina.
+
+
+Quesito 4 – Minimo di profitto per macchina
+
+Il responsabile vuole garantire una distribuzione equilibrata del profitto tra le macchine.
+Si vuole aggiungere il vincolo che ogni macchina deve contribuire ad almeno il 20% del profitto totale
+(in base all’utilizzo della macchina e alla produzione associata).
+
+Obiettivo aggiornato:
+Massimizzare il profitto, ma garantendo che il profitto generato tramite ciascuna macchina
+(sommando il contributo di tutti i prodotti che la usano) sia almeno pari al 20% del totale.
